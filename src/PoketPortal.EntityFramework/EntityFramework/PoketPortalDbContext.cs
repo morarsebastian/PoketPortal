@@ -50,6 +50,14 @@ namespace PoketPortal.EntityFramework
         {
 
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Place>().Property(a => a.Latitude).HasPrecision(18, 9);
+            modelBuilder.Entity<Place>().Property(a => a.Longitude).HasPrecision(18, 9);
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 
     public class PoketPortalDbConfiguration : DbConfiguration
