@@ -10,6 +10,10 @@ namespace PoketPortal.Places.Dtos
 {
     public class GetAllPlacesInput
     {
+        public decimal Latitude { get; set; }
+
+        public decimal Longitude { get; set; }
+
         public decimal Radius { get; set; }
     }
 

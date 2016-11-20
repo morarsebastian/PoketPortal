@@ -10,7 +10,7 @@ namespace PoketPortal.Places
 {
     public interface IPlaceAppService : IApplicationService
     {
-        Task<ListResultDto<PlaceListDto>> GetAll(/*GetAllPlacesInput input*/);
+        Task<ListResultDto<PlaceListDto>> GetAll(GetAllPlacesInput input);
         Task CreatePlace(CreatePlaceInput input);
     }
 }
