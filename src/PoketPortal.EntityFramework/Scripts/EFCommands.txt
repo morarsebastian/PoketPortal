@@ -1,0 +1,3 @@
+D:\Work\Projects\PoketPortal\src\PoketPortal.EntityFramework>dotnet ef migrations add "Places"
+D:\Work\Projects\PoketPortal\src\PoketPortal.EntityFramework>dotnet ef migrations script 201609281456404_Upgrade_To_Abp_1_0 --output D:\Work\Projects\PoketPortal\src\PoketPortal.EntityFramework\Scripts\output.sql
+D:\Work\Projects\PoketPortal\src\PoketPortal.EntityFramework>dotnet ef database update

@@ -7,6 +7,7 @@ using PoketPortal.Configuration;
 using PoketPortal.MultiTenancy;
 using PoketPortal.Users;
 using PoketPortal.Web;
+using PoketPortal.Places;
 
 namespace PoketPortal.EntityFramework
 {
@@ -14,6 +15,7 @@ namespace PoketPortal.EntityFramework
     public class PoketPortalDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         /* Define an IDbSet for each entity of the application */
+        public DbSet<Place> Places { get; set; }
 
         /* Default constructor is needed for EF command line tool. */
         public PoketPortalDbContext()

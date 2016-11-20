@@ -12,7 +12,7 @@ namespace PoketPortal.Migrations
 
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "PoketPortal";
         }
 

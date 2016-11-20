@@ -32,6 +32,8 @@ namespace PoketPortal.Web.Startup
                 options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
             });
 
+            services.AddSwaggerGen();
+
             //Configure Abp and Dependency Injection
             return services.AddAbp<PoketPortalWebModule>(options =>
             {
@@ -72,6 +74,9 @@ namespace PoketPortal.Web.Startup
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseSwagger();
+            app.UseSwaggerUi(); //URL: /swagger/ui
         }
 
         private static void ConfigureOwinServices(IAppBuilder app)
